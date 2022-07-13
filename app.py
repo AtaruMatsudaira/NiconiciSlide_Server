@@ -24,12 +24,12 @@ def AudioDownload():
 
 @ app.route("/ImageDownload", methods=['GET'])
 def ImageDownload():
-    return datas["image"]
+    return datas["my_image"]
 
 
 @ app.route("/ImageUpload/", methods=['GET', 'POST'])
 def ImageUpload():
-    datas["image"] = request.form["images"]
+    datas["my_image"] = request.form["images"]
     return make_response(jsonify({'result': True}))
 
 
